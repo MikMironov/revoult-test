@@ -1,9 +1,7 @@
 package ru.mm.common;
 
-import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Objects;
 
-@XmlRootElement
 public class Account {
 
     private Long id;

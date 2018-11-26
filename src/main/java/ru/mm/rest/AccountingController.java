@@ -28,7 +28,7 @@ public class AccountingController {
      */
     @GET
     @Path("/{id}")
-    @Produces(MediaType.APPLICATION_XML)
+    @Produces(MediaType.APPLICATION_JSON)
     public Response get(@PathParam("id") Long id) {
         try {
             return Response.ok(accountService.get(id)).build();
@@ -46,7 +46,8 @@ public class AccountingController {
      */
     @POST
     @Path("/")
-    @Produces(MediaType.APPLICATION_XML)
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
     public Response create(Account account) {
         try {
             return Response.ok(accountService.create(account)).build();
